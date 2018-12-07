@@ -19,6 +19,7 @@ export class RegisterComponent implements OnInit {
   register() {
     this.authService.register(this.model).subscribe(() => {
       console.log('registration successful');
+    // tslint:disable-next-line:no-shadowed-variable
     }, error => {
       console.log(error);
     });
